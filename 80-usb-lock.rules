@@ -1,0 +1,2 @@
+ACTION=="remove", SUBSYSTEMS=="usb", ENV{ID_VENDOR_ID}=="", ENV{ID_MODEL_ID}=="", RUN+="/usr/local/bin/usb-lock.sh lock"
+ACTION=="change", SUBSYSTEM=="power_supply", ATTR{online}=="0", RUN+="/usr/local/bin/usb-lock.sh lock"
