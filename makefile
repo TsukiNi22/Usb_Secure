@@ -10,10 +10,11 @@ SCREEN="3\ -\ Take\ Screen\ Of\ Intruder/take-screen.sh"
 #6 second-devide-id
 
 Execute1:
-	@sh "$PATH/$CONNECTION" $(PATH) $(USR) $(VENDOR) $(DEVICE) $(SVENDOR) $(SDEVICE)
+	@sudo sh "$(PATH)/$(CONNECTION)" $(PATH) $(USR) $(VENDOR) $(DEVICE) $(SVENDOR) $(SDEVICE)
 
 Execute2:
-	@sh "$PATH/$LOCK" $(PATH) $(USR) $(VENDOR) $(DEVICE) $(SVENDOR) $(SDEVICE)
+	@sudo sh "$(PATH)/$(LOCK)" $(PATH) $(USR) $(VENDOR) $(DEVICE) $(SVENDOR) $(SDEVICE)
 
 Execute3:
-	@sh "$PATH/$SCREEN" $(PATH) $(USR) $(VENDOR) $(DEVICE) $(SVENDOR) $(SDEVICE)
+	@echo "Running command: sudo sh $(PATH)/$(SCREEN) $(PATH) $(USR) $(VENDOR) $(DEVICE) $(SVENDOR) $(SDEVICE)"
+	@sudo sh "$(PATH)/$(SCREEN)" $(PATH) $(USR) $(VENDOR) $(DEVICE) $(SVENDOR) $(SDEVICE)
